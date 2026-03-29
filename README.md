@@ -1,5 +1,5 @@
 # Scriptium Compose
- Repository of Docker compose for [Scriptium](github.com/scriptium-project). Universal Theology Library.
+ Repository of Docker compose for [Scriptium](https://github.com/scriptium-project). Universal Theology Library.
  
 This repository consists of predefined docker-compose files and orchestration commands to manage the entire Scriptium ecosystem.
 
@@ -19,16 +19,16 @@ git clone github.com/kaanoz/scriptium-compose.git
 cd scriptium-compose
 ```
 
-For other parts of scriptium check out our [Frontend](github.com/kaanoz1/scriptium-frontend) and [Backend](github.com/kaanoz1/scriptium-backend).
+For other parts of scriptium check out our [Frontend](https://github.com/kaanoz1/scriptium-frontend) and [Backend](https://github.com/kaanoz1/scriptium-backend).
 
 For all in one go with **Docker**. Execute this command:
 
 
 ```bash
 # Clone all projects.
-git clone github.com/kaanoz1/scriptium-compose.git
-git clone github.com/kaanoz1/scriptium-backend.git
-git clone github.com/kaanoz1/scriptium-frontend.git
+git clone https://github.com/kaanoz1/scriptium-compose.git
+git clone https://github.com/kaanoz1/scriptium-backend.git
+git clone https://github.com/kaanoz1/scriptium-frontend.git
 
 # Initialize Frontend
 cd scriptium-frontend 
@@ -52,8 +52,8 @@ make build-pre && make up-pre
 
 ## Repository Links:
 
-- [Frontend (Nextjs/React)](github.com/kaanoz1/scriptium-frontend)
-- [Backend (.NET 10)](github.com/kaanoz1/scriptium-backend)
+- [Frontend (Nextjs/React)](https://github.com/kaanoz1/scriptium-frontend)
+- [Backend (.NET 10)](https://github.com/kaanoz1/scriptium-backend)
 
 
 ## 📄 License
