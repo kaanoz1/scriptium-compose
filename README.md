@@ -26,9 +26,9 @@ For all in one go with **Docker**. Execute this command:
 
 ```bash
 # Clone all projects.
-git clone github.com/kaanoz/scriptium-compose.git
-git clone github.com/kaanoz/scriptium-backend.git
-git clone github.com/kaanoz/scriptium-frontend.git
+git clone github.com/kaanoz1/scriptium-compose.git
+git clone github.com/kaanoz1/scriptium-backend.git
+git clone github.com/kaanoz1/scriptium-frontend.git
 
 # Initialize Frontend
 cd scriptium-frontend 
