@@ -15,7 +15,7 @@ Before starting, ensure you have the following installed:
 Initialize **this repository only**:
 
 ```bash
-git clone github.com/kaanoz/scriptium-compose.git
+git clone https://github.com/kaanoz/scriptium-compose.git
 cd scriptium-compose
 ```
 
@@ -29,9 +29,9 @@ For all in one go with **Docker**. Execute this command:
 mkdir scriptium
 cd scriptium
 
-git clone github.com/kaanoz/scriptium-compose.git
-git clone github.com/kaanoz/scriptium-backend.git
-git clone github.com/kaanoz/scriptium-frontend.git
+git clone https://github.com/kaanoz/scriptium-compose.git
+git clone https://github.com/kaanoz/scriptium-backend.git
+git clone https://github.com/kaanoz/scriptium-frontend.git
 
 # Initialize Frontend
 cd scriptium-frontend 
