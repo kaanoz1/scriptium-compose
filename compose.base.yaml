@@ -1,0 +1,66 @@
+services:
+  db:
+    image: pgvector/pgvector:pg16
+    container_name: scriptium-db
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - scriptium-network
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER} -d ${POSTGRES_DB}"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  backend:
+    container_name: scriptium-backend
+    build:
+      context: ../scriptium-backend
+      dockerfile: Dockerfile
+    networks:
+      - scriptium-network
+    depends_on:
+      db:
+        condition: service_healthy
+      ollama:
+        condition: service_healthy
+
+  frontend:
+    container_name: scriptium-frondtend
+    build:
+      context: ../scriptium-frontend
+      args:
+        - NEXT_PUBLIC_API_URL=${NEXT_PUBLIC_API_URL}
+    networks:
+      - scriptium-network
+
+  ollama:
+    container_name: scriptium-ollama
+    image: ollama/ollama:latest
+    ports:
+      - "11434:11434"
+    volumes:
+      - ollama_data:/root/.ollama
+    networks:
+      - scriptium-network
+    entrypoint: /bin/sh
+    command: >
+      -c "ollama serve & 
+      sleep 10 && 
+      ollama pull mxbai-embed-large && 
+      ollama pull nomic-embed-text && 
+      wait"
+    healthcheck:
+      test: ["CMD-SHELL", "ollama list | grep -q 'nomic-embed-text'"]
+      interval: 10s
+      timeout: 10s
+      retries: 20
+      start_period: 30s
+
+networks:
+  scriptium-network:
+    driver: bridge
+
+volumes:
+  postgres_data:
+  ollama_data:
