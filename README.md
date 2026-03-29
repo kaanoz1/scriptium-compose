@@ -15,8 +15,8 @@ Before starting, ensure you have the following installed:
 Initialize **this repository only**:
 
 ```bash
-	git clone github.com/kaanoz/scriptium-compose.git
-	cd scriptium-compose
+git clone github.com/kaanoz/scriptium-compose.git
+cd scriptium-compose
 ```
 
 For other parts of scriptium check out our [Frontend](github.com/kaanoz1/scriptium-frontend) and [Backend](github.com/kaanoz1/scriptium-backend).
