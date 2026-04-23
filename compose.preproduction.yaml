@@ -43,4 +43,10 @@ services:
       - backend
     restart: always
 
+  ollama:
+    extends:
+      file: compose.base.yaml
+      service: ollama
+    restart: always
+
 
